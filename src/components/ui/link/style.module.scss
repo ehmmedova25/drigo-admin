@@ -1,0 +1,10 @@
+.root {
+  font-family: var(--paragraph-font-family);
+  font-weight: 400;
+  color: var(--brand);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

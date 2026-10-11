@@ -1,0 +1,102 @@
+$tablet: 768px;
+$desktop: 1266px;
+
+$sidebar-width: 264px;
+$content-max-width: 1480px;
+
+@mixin tokens {
+  :root {
+    --font-main: "Manrope", "Helvetica", "Arial", sans-serif;
+
+    --heading-font-family: var(--font-main);
+    --paragraph-font-family: var(--font-main);
+    --input-font-family: var(--font-main);
+    --label-font-family: var(--font-main);
+    --button-font-family: var(--font-main);
+
+    --text-primary: #16123a;
+    --text-ink: #25214a;
+    --text-ink-soft: rgba(29, 41, 61, 0.5);
+    --text-label: #45556c;
+    --text-secondary: #6b6890;
+    --text-muted: #9a97b8;
+    --text-placeholder: #9ca3af;
+    --text-disabled: #cbd5e1;
+    --text-on-brand: #ffffff;
+
+    --surface-default: #ffffff;
+    --surface-page: #f4f2fc;
+    --surface-muted: #f9f8fe;
+    --surface-hover: #f4f2fc;
+    --surface-selected: #efebff;
+    --surface-overlay: rgba(17, 13, 38, 0.45);
+    --surface-input: #f7f6fd;
+
+    --border-default: #e4e1f3;
+    --border-subtle: #efedf8;
+    --border-hover: #c9c7da;
+    --border-focus: #5b2ef5;
+    --border-error: #d32f2f;
+
+    --shadow-modal: 0 24px 64px rgba(17, 13, 38, 0.2);
+    --shadow-raised: 0 4px 24px rgba(91, 46, 245, 0.05), 0 1px 2px rgba(22, 18, 58, 0.04);
+    --shadow-hover: 0 12px 32px rgba(91, 46, 245, 0.1);
+    --shadow-brand: 0 6px 16px rgba(91, 46, 245, 0.28);
+    --focus-ring: 0 0 0 4px rgba(91, 46, 245, 0.14);
+    --shadow-toast: 0 12px 32px rgba(17, 13, 38, 0.22);
+
+    --brand: #5b2ef5;
+    --brand-hover: #4a1fe0;
+    --brand-disabled: #c8bcfc;
+    --brand-soft: #efebff;
+    --brand-soft-hover: #e4ddff;
+    --auth-background: var(--surface-page);
+    --brand-soft-gradient: linear-gradient(135deg, #f3efff 0%, #e9e2ff 100%);
+    --tone-lavender: #efeaff;
+    --tone-lilac: #f6e9ff;
+    --tone-sky: #e8eeff;
+    --tone-rose: #ffe9f3;
+    --brand-gradient: linear-gradient(150deg, #6a3df7 0%, #5b2ef5 45%, #3d17c9 100%);
+    --on-brand-glow: rgba(255, 255, 255, 0.08);
+    --on-brand-spot: rgba(255, 255, 255, 0.24);
+    --page-glow: radial-gradient(1200px 520px at 85% -10%, rgba(91, 46, 245, 0.1), transparent 70%);
+    --on-brand-tag: rgba(255, 255, 255, 0.18);
+    --on-brand-muted: rgba(255, 255, 255, 0.78);
+
+    --sidebar-background: var(--surface-default);
+    --sidebar-border: var(--border-subtle);
+    --sidebar-text: var(--text-secondary);
+    --sidebar-text-strong: var(--text-primary);
+    --sidebar-group: var(--text-muted);
+    --sidebar-hover: var(--brand-soft);
+    --sidebar-active: var(--brand-gradient);
+
+    --radius-control: 12px;
+    --radius-card: 20px;
+    --radius-surface: 14px;
+    --radius-small: 8px;
+    --radius-pill: 999px;
+
+    --danger: #d32f2f;
+    --danger-hover: #b71c1c;
+    --alert-error-surface: #fdecea;
+    --alert-error-text: #611a15;
+    --alert-success-surface: #edf7ed;
+    --alert-success-text: #1e4620;
+    --alert-warning-surface: #fff4e5;
+    --alert-warning-text: #663c00;
+    --alert-info-surface: #e5f6fd;
+    --alert-info-text: #014361;
+
+    --status-success-surface: #dcfce7;
+    --status-success-text: #15803d;
+    --status-info-surface: #e0e7ff;
+    --status-info-text: #4338ca;
+    --status-warning-surface: #ffedd5;
+    --status-warning-text: #c2410c;
+    --status-danger-surface: #fee2e2;
+    --status-danger-text: #b91c1c;
+    --status-neutral-surface: #f1f5f9;
+    --status-neutral-text: #475569;
+  }
+}

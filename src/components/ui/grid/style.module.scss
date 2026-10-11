@@ -1,0 +1,41 @@
+$spacing: (
+  'none': 0,
+  '2xs': 4px,
+  'xs': 8px,
+  'sm': 12px,
+  'md': 16px,
+  'lg': 24px,
+  'xl': 32px,
+  '2xl': 48px,
+);
+
+$min-widths: (
+  'sm': 200px,
+  'md': 320px,
+  'lg': 460px,
+);
+
+.root {
+  display: grid;
+  min-width: 0;
+}
+
+@each $name, $value in $min-widths {
+  .#{$name} {
+    grid-template-columns: repeat(auto-fit, minmax(min($value, 100%), 1fr));
+  }
+}
+
+@each $name, $value in $spacing {
+  .gap-#{$name} {
+    gap: $value;
+  }
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-start {
+  align-items: start;
+}

@@ -1,0 +1,124 @@
+@use '@/constants/variables' as vars;
+
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 240px;
+  padding: 32px 40px;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--brand-gradient);
+  box-shadow: var(--shadow-brand);
+  animation: rise 0.5s ease-out;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: var(--on-brand-glow);
+  }
+
+  &::before {
+    top: -80px;
+    right: 30%;
+    width: 220px;
+    height: 220px;
+  }
+
+  &::after {
+    right: -60px;
+    bottom: -120px;
+    width: 340px;
+    height: 340px;
+  }
+
+  @media (max-width: vars.$tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.primaryAction,
+.secondaryAction {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    transform 0.15s,
+    background 0.15s;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.primaryAction {
+  color: var(--brand);
+  background: var(--surface-default);
+}
+
+.secondaryAction {
+  color: var(--text-on-brand);
+  background: var(--on-brand-tag);
+}
+
+.photo {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: -12px;
+  width: 46%;
+  max-width: 440px;
+  height: 112%;
+  object-fit: contain;
+  object-position: right bottom;
+  background: radial-gradient(closest-side at 55% 60%, var(--on-brand-spot), transparent);
+  animation: slide-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  @media (max-width: vars.$tablet) {
+    position: static;
+    align-self: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: -16px;
+    object-position: center bottom;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}

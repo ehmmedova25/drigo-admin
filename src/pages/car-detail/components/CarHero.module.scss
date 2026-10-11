@@ -1,0 +1,84 @@
+@use '@/constants/variables' as vars;
+
+.root {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 24px;
+  padding: 24px;
+  border-radius: var(--radius-card);
+  background: var(--surface-default);
+  box-shadow: var(--shadow-raised);
+
+  @media (max-width: vars.$desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 32px;
+  overflow: hidden;
+  border-radius: var(--radius-surface);
+  background: var(--brand-soft-gradient);
+}
+
+.plate {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--brand);
+  background: var(--surface-default);
+}
+
+.car {
+  max-width: 520px;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--brand);
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: var(--radius-surface);
+  background: var(--surface-muted);
+}
+
+.specValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}

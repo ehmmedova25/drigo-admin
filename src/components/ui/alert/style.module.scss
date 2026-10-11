@@ -1,0 +1,26 @@
+.root {
+  padding: 12px 16px;
+  border-radius: var(--radius-control);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.error {
+  color: var(--alert-error-text);
+  background: var(--alert-error-surface);
+}
+
+.warning {
+  color: var(--alert-warning-text);
+  background: var(--alert-warning-surface);
+}
+
+.info {
+  color: var(--alert-info-text);
+  background: var(--alert-info-surface);
+}
+
+.success {
+  color: var(--alert-success-text);
+  background: var(--alert-success-surface);
+}

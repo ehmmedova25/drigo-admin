@@ -1,0 +1,56 @@
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+.donut {
+  position: relative;
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+}
+
+.total {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.totalValue {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  color: var(--text-primary);
+}
+
+.legend {
+  flex: 1;
+  min-width: 160px;
+}
+
+.extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.extra {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: var(--radius-surface);
+  background: var(--surface-muted);
+}
+
+.extraValue {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}

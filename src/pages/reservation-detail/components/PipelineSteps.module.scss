@@ -1,0 +1,22 @@
+.step {
+  padding: 6px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-surface);
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-muted);
+  background: var(--surface-muted);
+}
+
+.done {
+  border-color: transparent;
+  color: var(--status-info-text);
+  background: var(--status-info-surface);
+}
+
+.current {
+  border-color: var(--brand);
+  font-weight: 500;
+  color: var(--text-on-brand);
+  background: var(--brand);
+}

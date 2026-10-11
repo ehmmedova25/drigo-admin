@@ -1,0 +1,35 @@
+.root {
+  min-height: 42px;
+  padding: 8px 36px 8px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  outline: none;
+  appearance: none;
+  font-family: var(--input-font-family);
+  font-size: 14px;
+  color: var(--text-primary);
+  background:
+    linear-gradient(45deg, transparent 50%, var(--text-secondary) 50%) calc(100% - 18px) 50% / 5px 5px no-repeat,
+    linear-gradient(135deg, var(--text-secondary) 50%, transparent 50%) calc(100% - 13px) 50% / 5px 5px no-repeat,
+    var(--surface-input);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  &:focus {
+    border-color: var(--border-focus);
+    box-shadow: var(--focus-ring);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--surface-muted);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

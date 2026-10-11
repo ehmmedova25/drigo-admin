@@ -1,0 +1,27 @@
+.root {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  outline: none;
+  resize: vertical;
+  font-family: var(--input-font-family);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--surface-input);
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+
+  &::placeholder {
+    color: var(--text-ink-soft);
+  }
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  &:focus {
+    border-color: var(--border-focus);
+    background: var(--surface-default);
+    box-shadow: var(--focus-ring);
+  }
+}

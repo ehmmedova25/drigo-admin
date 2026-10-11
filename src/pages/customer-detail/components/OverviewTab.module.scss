@@ -1,0 +1,12 @@
+.sectionTitle {
+  margin-top: 8px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-surface);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-muted);
+  object-fit: cover;
+}

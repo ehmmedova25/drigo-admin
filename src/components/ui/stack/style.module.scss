@@ -1,0 +1,63 @@
+$spacing: (
+  'none': 0,
+  '2xs': 4px,
+  'xs': 8px,
+  'sm': 12px,
+  'md': 16px,
+  'lg': 24px,
+  'xl': 32px,
+  '2xl': 48px,
+);
+
+$align: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'stretch': stretch,
+  'baseline': baseline,
+);
+
+$justify: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'between': space-between,
+  'around': space-around,
+  'evenly': space-evenly,
+);
+
+.root {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+@each $name, $value in $spacing {
+  .gap-#{$name} {
+    gap: $value;
+  }
+}
+
+@each $name, $value in $align {
+  .align-#{$name} {
+    align-items: $value;
+  }
+}
+
+@each $name, $value in $justify {
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+}

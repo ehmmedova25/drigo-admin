@@ -1,0 +1,32 @@
+.root {
+  display: grid;
+  grid-template-columns: minmax(120px, max-content) 1fr;
+  margin: 0;
+}
+
+.row {
+  display: contents;
+
+  &:not(:last-child) > * {
+    border-bottom: 1px dashed var(--border-subtle);
+  }
+}
+
+.label,
+.value {
+  padding: 10px 0;
+}
+
+.label {
+  padding-right: 24px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.value {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-ink);
+  word-break: break-word;
+}

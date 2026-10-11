@@ -1,0 +1,8 @@
+.thumb {
+  display: block;
+  width: 56px;
+  height: 40px;
+  border-radius: var(--radius-small);
+  object-fit: cover;
+  background: var(--surface-muted);
+}

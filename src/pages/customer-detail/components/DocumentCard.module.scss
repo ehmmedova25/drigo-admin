@@ -1,0 +1,18 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.photo {
+  width: 128px;
+  height: 88px;
+  border-radius: var(--radius-surface);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-muted);
+  object-fit: cover;
+}

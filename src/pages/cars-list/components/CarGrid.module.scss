@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  transition: opacity 0.15s;
+}
+
+.dimmed {
+  opacity: 0.55;
+}
